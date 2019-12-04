@@ -1,26 +1,25 @@
 import React from 'react';
-import { AzureAD } from 'react-aad-msal';
+// eslint-disable-next-line no-unused-vars
+import { AzureAD, IAzureADFunctionProps } from 'react-aad-msal';
 import authProvider from './authProvider';
 
 type Props = {
   children: any;
 }
 
-export type AADProps = {
-  login?: () => void;
-  logout?: () => void;
-  authenticationState?: string;
-}
-
 const AuthenticationContext = React.createContext({});
 
 export const AuthenticationProvider: React.FunctionComponent<Props> = ({ children }: Props) => (
   <AzureAD provider={authProvider}>
-    {({ login, logout, authenticationState }: AADProps) => (
+    {({
+      login, logout, authenticationState, accountInfo, error,
+    }: IAzureADFunctionProps) => (
       <AuthenticationContext.Provider value={{
         login,
         logout,
         authenticationState,
+        accountInfo,
+        error,
       }}
       >
         {children}
