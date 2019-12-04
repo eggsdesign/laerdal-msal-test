@@ -1,0 +1,30 @@
+{
+  "name": "msal-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Erland Glad Solstrand <erland.glad.solstrand@eggsdesign.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.14",
+    "@types/react-dom": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "msal": "^1.1.3",
+    "react": "^16.12.0",
+    "react-aad-msal": "^2.1.1",
+    "react-dom": "^16.12.0"
+  }
+}
